@@ -3,17 +3,26 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Check if dark mode preference is stored in localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
-        document.body.classList.add('dark-mode');
+        enableDarkMode();
         toggleSwitch.checked = true;
     }
 
     toggleSwitch.addEventListener('change', () => {
         if (toggleSwitch.checked) {
-            document.body.classList.add('dark-mode');
+            enableDarkMode();
             localStorage.setItem('darkMode', 'enabled');
         } else {
-            document.body.classList.remove('dark-mode');
+            disableDarkMode();
             localStorage.setItem('darkMode', 'disabled');
         }
     });
+
+    function enableDarkMode() {
+        document.querySelector('main').classList.add('dark-mode');
+    }
+
+    function disableDarkMode() {
+        document.querySelector('main').classList.remove('dark-mode');
+    }
 });
+

@@ -1,5 +1,4 @@
 
-
 /* Existing styles */
 body {
     font-family: 'Roboto', sans-serif;
@@ -47,6 +46,7 @@ main {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    color: #333; /* Ensure text color is dark in light mode */
 }
 
 .player {
@@ -126,6 +126,12 @@ input:checked + .slider:before {
 
 .slider.round:before {
     border-radius: 50%;
+}
+
+/* Dark mode styles for main section */
+main.dark-mode {
+    background-color: #333; /* Dark grey background */
+    color: white; /* White text */
 }
 
 
