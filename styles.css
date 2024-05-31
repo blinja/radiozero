@@ -134,6 +134,12 @@ main.dark-mode {
     color: white; /* White text */
 }
 
+/* Dark mode styles for visualizer */
+#visualizer.dark-mode {
+    background-color: #222; /* Darker background color */
+    border-color: #fff; /* White border color */
+}
+
 /* Visualiser settings */
 #visualizer {
     width: 100%;
