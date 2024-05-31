@@ -4,6 +4,12 @@ window.onload = function() {
     const playPauseBtn = document.getElementById('playPauseBtn'); // Play/Pause button
     const volumeSlider = document.getElementById('volumeSlider'); // Volume control slider
     const visualizer = document.getElementById('visualizer'); // Canvas element for visualizer
+
+    if (!audio || !playPauseBtn || !volumeSlider || !visualizer) {
+        console.error('One or more elements not found in the DOM.');
+        return;
+    }
+
     const canvasCtx = visualizer.getContext('2d'); // 2D context for canvas drawing
 
     let audioContext;
@@ -88,10 +94,14 @@ window.onload = function() {
     }
 }
 
-
 // For the dark mode slider
 document.addEventListener('DOMContentLoaded', (event) => {
     const toggleSwitch = document.getElementById('darkModeToggle');
+
+    if (!toggleSwitch) {
+        console.error('Dark mode toggle switch not found in the DOM.');
+        return;
+    }
 
     // Check if dark mode preference is stored in localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
