@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif; /* Use Google Fonts */
     margin: 0;
     padding: 0;
-    background: url('images/OVHoe.jpg') no-repeat center center fixed; /* Background image */
+    background: url('Images/OVHoe.jpg') no-repeat center center fixed; /* Background image */
     background-size: cover; /* Ensure the image covers the entire background */
     color: #333; /* Dark text color */
     display: flex;
