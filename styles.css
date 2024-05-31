@@ -15,18 +15,18 @@ body {
 
 .content-wrapper {
     flex: 1;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8); 
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    max-width: 800px;
+    max-width: 800px; 
     margin: 20px auto;
 }
 
 header {
     background-color: #00796b;
     color: white;
-    padding: 20px;
+    padding: 20px; 
     text-align: center;
     border-bottom: 4px solid #388E3C;
 }
@@ -128,29 +128,6 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* Dark mode styles */
-body.dark-mode {
-    background-color: #333;
-    color: white;
-    background: url('/radiozero/Images/OVHoe-dark.jpg') no-repeat center center fixed;
-    background-size: cover;
-}
 
-header.dark-mode {
-    background-color: #00574b;
-}
-
-footer.dark-mode {
-    background-color: #00574b;
-    color: white;
-}
-
-.content-wrapper.dark-mode {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-main.dark-mode {
-    background-color: #444;
-}
 
 
