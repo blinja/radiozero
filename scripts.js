@@ -1,31 +1,30 @@
-window.onload = function() {
-    const audio = document.getElementById('audio'); // The audio element
-    const playPauseBtn = document.getElementById('playPauseBtn'); // Play/Pause button
-    const volumeSlider = document.getElementById('volumeSlider'); // Volume control slider
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('audio');
+    const bars = document.getElementById('bars');
 
-    if (!audio || !playPauseBtn || !volumeSlider) {
-        console.error('One or more elements not found in the DOM.');
-        return;
+    audio.addEventListener('play', function() {
+        console.log('Play event triggered'); // Check if the play event is being triggered
+        bars.classList.add('playing'); // Add 'playing' class to start the animation
+        animateBars(); // Call function to animate the bars with random durations
+    });
+
+    audio.addEventListener('pause', function() {
+        bars.classList.remove('playing'); // Remove 'playing' class to stop the animation
+    });
+
+    audio.addEventListener('ended', function() {
+        bars.classList.remove('playing'); // Remove 'playing' class when the audio ends
+    });
+
+    function animateBars() {
+        const barElements = bars.querySelectorAll('div'); // Select all individual bars
+        barElements.forEach((bar) => {
+            const duration = Math.random() * 2 + 0.5; // Generate random duration between 0.5 and 2.5 seconds
+            bar.style.animationDuration = `${duration}s`; // Apply the random duration to each bar
+        });
     }
+});
 
-    // Event listener for the play/pause button
-    playPauseBtn.addEventListener('click', () => {
-        if (audio.paused) {
-            audio.play(); // Play audio if paused
-            playPauseBtn.textContent = 'Pause'; // Update button text to 'Pause'
-        } else {
-            audio.pause(); // Pause audio if playing
-            playPauseBtn.textContent = 'Play'; // Update button text to 'Play'
-        }
-    });
-
-    // Event listener for the volume slider
-    volumeSlider.addEventListener('input', () => {
-        audio.volume = volumeSlider.value; // Set audio volume based on slider value
-    });
-};
-
-// For the dark mode slider
 document.addEventListener('DOMContentLoaded', (event) => {
     const toggleSwitch = document.getElementById('darkModeToggle');
 
@@ -34,7 +33,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         return;
     }
 
-    // Check if dark mode preference is stored in localStorage
     if (localStorage.getItem('darkMode') === 'enabled') {
         enableDarkMode();
         toggleSwitch.checked = true;

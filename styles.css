@@ -1,9 +1,16 @@
-/* Existing styles */
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/radiozero/Images/orange.png') no-repeat center center fixed;
+    background: url('Images/orange.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     justify-content: center;
@@ -13,11 +20,7 @@ body {
     background-color: rgba(255, 255, 255);
 }
 
-.content {
-    position: relative; /* Ensure the content remains positioned relative to the container */
-    color: rgba(0, 0, 0); /* Text color with */
-}
-
+/* Main container */
 .container {
     display: flex;
     flex-direction: column;
@@ -26,9 +29,10 @@ body {
     position: relative;
 }
 
+/* Header and footer styles */
 header, footer {
     display: flex;
-    width: 100%; /* Make the header and footer full width */
+    width: 100%;
     justify-content: space-between;
     padding: 10px;
     color: white;
@@ -45,10 +49,11 @@ footer {
     position: absolute;
     width: 100%;
     bottom: 0;
-    justify-content: center; /* Center the icons in the footer */
+    justify-content: center;
     text-align: center;
 }
 
+/* Main content styles */
 main {
     flex: 1;
     display: flex;
@@ -58,44 +63,45 @@ main {
     text-align: center;
 }
 
+/* Content within main */
 .content {
     color: white;
 }
 
+/* Social icons container */
 .social-icons {
-    margin-bottom: 40px; /* Add margin below the social icons */
+    margin-bottom: 40px;
 }
 
+/* Individual social icon */
 .social-icons a, .footer-center a, .app-store a {
-    margin: 0 10px; /* Adjust the margin as needed */
+    margin: 0 10px;
 }
 
+/* Social icon image */
 .social-icons img, .footer-center img, .app-store img {
-    width: 48px; /* Set the width of the images */
-    height: 48px; /* Set the height of the images to make them square */
+    width: 48px;
+    height: 48px;
 }
 
-.logo img {
-    width: 200px;
-    margin: 20px 0;
-}
-
+/* Audio player styles */
 .player audio {
     width: 250px;
 }
 
+/* App download section styles */
 .app-download p {
     margin: 10px 0;
-    color: black; /* Set the text color to black */
+    color: black;
 }
 
-/* Specific styles for smaller icons in the footer */
+/* Small icons in footer */
 .footer-center .small-icon {
-    width: 48px; /* Set the width of the small icons */
-    height: 48px; /* Set the height of the small icons to make them square */
+    width: 48px;
+    height: 48px;
 }
 
-/* Dark Mode Styles */
+/* Dark mode toggle switch styles */
 .switch {
     position: absolute;
     top: 20px;
@@ -149,21 +155,55 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* New styles for the name tags */
+/* Name tags container */
 .name-tags {
     display: flex;
     justify-content: space-around;
     width: 100%;
     position: absolute;
     top: 20px;
-    padding: 0 40px; /* Add padding to the left and right edges */
-    box-sizing: border-box; /* Ensure padding is included in the width */
+    padding: 0 40px;
+    box-sizing: border-box;
 }
 
+/* Individual name tag */
 .name-tag {
-    font-size: 24px; /* Increase font size */
-    color: black; /* Set text color to black */
+    font-size: 24px;
+    color: black;
     font-weight: bold;
 }
+
+/* Bars container */
+.bars {
+    margin-top: 20px;
+    width: 100%; /* Adjusted width to fill the container */
+    display: flex;
+    justify-content: center; /* Center the bars horizontally */
+}
+
+/* Individual bar styles */
+.bars div {
+    width: 4px;
+    height: 20px;
+    background-color: #f1592a;
+    animation: none; /* Disable animation initially */
+    margin: 0 5px; /* Adjusted margin to space the bars closer together */
+}
+
+/* Keyframes for bar animation */
+@keyframes bounce {
+    0%, 100% {
+        height: 5px;
+    }
+    50% {
+        height: 20px;
+    }
+}
+
+/* Animation for bars when audio is playing */
+.playing.bars div {
+    animation: bounce 1s infinite;
+}
+
 
 
