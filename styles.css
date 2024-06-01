@@ -1,80 +1,101 @@
-
 /* Existing styles */
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/radiozero/Images/OVHoe.jpg') no-repeat center center fixed;
+    background: url('/radiozero/Images/orange.png') no-repeat center center fixed;
     background-size: cover;
-    color: #333;
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    z-index: -1;
+    background-color: rgba(255, 255, 255);
 }
 
-.content-wrapper {
-    flex: 1;
-    background: rgba(255, 255, 255, 0.8); 
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    max-width: 800px; 
-    margin: 20px auto;
+.content {
+    position: relative; /* Ensure the content remains positioned relative to the container */
+    color: rgba(0, 0, 0); /* Text color with */
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 33%;
+    position: relative;
+}
+
+header, footer {
+    display: flex;
+    width: 100%; /* Make the header and footer full width */
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+    font-size: 12px;
 }
 
 header {
-    background-color: #00796b;
-    color: white;
-    padding: 20px; 
-    text-align: center;
-    border-bottom: 4px solid #388E3C;
-}
-
-h1, h2 {
-    margin-top: 0;
-    font-weight: 700;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    color: #333; /* Ensure text color is dark in light mode */
-}
-
-.player {
-    text-align: center;
-    margin-bottom: 30px;
-    border-top: 2px solid #4CAF50;
-    padding-top: 10px;
-}
-
-audio {
+    position: absolute;
     width: 100%;
-    max-width: 600px;
-    margin-top: 1em;
-    border-radius: 10px;
+    top: 0;
 }
 
 footer {
-    background-color: #00796b;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    position: relative;
-    bottom: 0;
+    position: absolute;
     width: 100%;
-    margin-top: auto;
+    bottom: 0;
+    justify-content: center; /* Center the icons in the footer */
+    text-align: center;
 }
 
-/* Slider styles */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    color: white;
+}
+
+.social-icons {
+    margin-bottom: 40px; /* Add margin below the social icons */
+}
+
+.social-icons a, .footer-center a, .app-store a {
+    margin: 0 10px; /* Adjust the margin as needed */
+}
+
+.social-icons img, .footer-center img, .app-store img {
+    width: 48px; /* Set the width of the images */
+    height: 48px; /* Set the height of the images to make them square */
+}
+
+.logo img {
+    width: 200px;
+    margin: 20px 0;
+}
+
+.player audio {
+    width: 250px;
+}
+
+.app-download p {
+    margin: 10px 0;
+    color: black; /* Set the text color to black */
+}
+
+/* Specific styles for smaller icons in the footer */
+.footer-center .small-icon {
+    width: 48px; /* Set the width of the small icons */
+    height: 48px; /* Set the height of the small icons to make them square */
+}
+
+/* Dark Mode Styles */
 .switch {
     position: absolute;
     top: 20px;
@@ -128,27 +149,21 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-/* Dark mode styles for main section */
-main.dark-mode {
-    background-color: #333; /* Dark grey background */
-    color: white; /* White text */
-}
-
-/* Dark mode styles for visualizer */
-#visualizer.dark-mode {
-    background-color: #222; /* Darker background color */
-    border-color: #fff; /* White border color */
-}
-
-/* Visualiser settings */
-#visualizer {
+/* New styles for the name tags */
+.name-tags {
+    display: flex;
+    justify-content: space-around;
     width: 100%;
-    height: 200px;
-    border: 1px solid #333;
-    border-radius: 10px;
-    margin-top: 20px;
+    position: absolute;
+    top: 20px;
+    padding: 0 40px; /* Add padding to the left and right edges */
+    box-sizing: border-box; /* Ensure padding is included in the width */
 }
 
-
+.name-tag {
+    font-size: 24px; /* Increase font size */
+    color: black; /* Set text color to black */
+    font-weight: bold;
+}
 
 
