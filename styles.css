@@ -179,6 +179,7 @@ input:checked + .slider:before {
     width: 100%; /* Adjusted width to fill the container */
     display: flex;
     justify-content: center; /* Center the bars horizontally */
+    height: 30px;
 }
 
 /* Individual bar styles */
@@ -204,6 +205,3 @@ input:checked + .slider:before {
 .playing.bars div {
     animation: bounce 1s infinite;
 }
-
-
-
