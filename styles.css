@@ -10,14 +10,14 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background: url('Images/orange.png') no-repeat center center fixed;
+    /* background: url('Images/orange.png') no-repeat center center fixed; */
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     z-index: -1;
-    background-color: rgba(255, 255, 255);
+    background-color: #ef7753;
 }
 
 /* Main container */
@@ -37,6 +37,14 @@ header, footer {
     padding: 10px;
     color: white;
     font-size: 12px;
+}
+
+.footer-right {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    justify-content: right;
+    text-align: right;
 }
 
 header {
@@ -82,6 +90,12 @@ main {
 .social-icons img, .footer-center img, .app-store img {
     width: 48px;
     height: 48px;
+}
+
+#rzLogo {
+    height: auto;
+    max-width: 500px;
+    margin: 0 10px;
 }
 
 /* Audio player styles */
@@ -186,7 +200,7 @@ input:checked + .slider:before {
 .bars div {
     width: 4px;
     height: 20px;
-    background-color: #f1592a;
+    background-color: #000000;
     animation: none; /* Disable animation initially */
     margin: 0 5px; /* Adjusted margin to space the bars closer together */
 }
