@@ -17,7 +17,7 @@ body {
     align-items: center;
     height: 100vh;
     z-index: -1;
-    background-color: #3d2f20;
+    background-color: #ef7753;
 }
 
 /* Main container */
@@ -200,7 +200,7 @@ input:checked + .slider:before {
 .bars div {
     width: 4px;
     height: 20px;
-    background-color: #a0938c;
+    background-color: #000000;
     animation: none; /* Disable animation initially */
     margin: 0 5px; /* Adjusted margin to space the bars closer together */
 }
